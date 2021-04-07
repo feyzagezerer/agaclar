@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Ağaçlar</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/Home/Home" class="navbar-brand"> <img src="~/Content/Alptagut-1 PNG - Kopya.png" alt="Ağaç" title="Bana aittir, çalmayın." width="20" height="20" /> Ağaçlar </a>
+            </div>
+           
+                      @*@Html.ActionLink("Ağaçlar", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+           
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Anasayfa", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Ağaç Nedir?", "About", "Home")</li>
+                    <li>@Html.ActionLink("Çeşitleri Nelerdir?", "Cesitler", "Home")</li>
+                    <li>@Html.ActionLink("Ne İçin Kullanılırlar?", "Kullanim", "Home")</li>
+                    <li>@Html.ActionLink("İletişim", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Site Haritası", "Harita", "Home")</li>
+                </ul>
+                <div class="nav navbar-nav navbar-right col-md-4">
+                    <div class="col-md-3">
+                        <div class="dropdown">
+
+                            <button class="btn btn-default" type="button" data-toggle="dropdown">TR	<span class="caret"></span></button>
+
+                            <ul class="dropdown-menu">
+                                <li><a href="#">EN</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">Ara</button>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Arama...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*  @Html.Partial("_LoginPartial") *@
+        </div>
+    </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="panel panel-default">
+             <div class="panel-body">
+                   <p style="margin:0;">&copy; @DateTime.Now.Year - Ağaçlar</p>
+            </div>
+    </div>
+    </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+   
+</body>
+</html>

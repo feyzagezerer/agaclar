@@ -1,0 +1,21 @@
+﻿body {
+}
+ 
+.title {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 22px;
+}
+.dropdownmenu {
+font-family: Arial, Helvetica, Sans-Serif;
+background-color: #00BBFF;
+}
+.textbox {
+font-family: Arial Helvetica, Sans-Serif;
+background-color: #00BBFF;
+border: 1px solid
+}
+.button {
+font-family: Arial;
+background-color: #00BBFF;
+border: 1px solid
+}
